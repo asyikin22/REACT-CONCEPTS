@@ -1,3 +1,4 @@
+/* card component
 .card {
   border: 1px solid rgba(118, 118, 113, 0.853);
   border-radius: 10px;
@@ -19,11 +20,26 @@ img {
   margin-bottom: 10px;
 }
 
-h2 {
+.card .card title {
   font-size: 10rem;
   color: brown;
 }
 
-p {
+.card .card-text {
   font-size: 5rem;
+} */
+
+/* employee component */
+
+.Employee {
+  font-family: Arial;
+  color: blueviolet;
+  font-size: 1em;
+  padding: 10px;
+  border: 1px solid brown;
 }
+
+.Employee p {
+  margin: 0;
+}
+
