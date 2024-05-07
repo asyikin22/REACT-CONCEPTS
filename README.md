@@ -34,6 +34,7 @@ Currently, two official plugins are available:
 * Style accordingly
 
 **END RESULT:**
+
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/9a2791e7-fd80-4cfa-aec9-f61ed565f712)
 
 
