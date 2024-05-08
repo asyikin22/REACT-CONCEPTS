@@ -31,7 +31,7 @@ img {
 
 /* employee component */
 
-.Employee {
+/* .Employee {
   font-family: Arial;
   color: blueviolet;
   font-size: 1em;
@@ -41,5 +41,26 @@ img {
 
 .Employee p {
   margin: 0;
+} */
+
+/*Greeting component  */
+
+.greeting-message {
+  font-size: 2em;
+  background-color: hsl(211, 100%, 30%);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0;
+  width: 400px;
 }
 
+.login-message {
+  font-size: 2em;
+  background-color: hsl(358, 100%, 30%);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0;
+  width: 500px;
+}
