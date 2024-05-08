@@ -45,7 +45,7 @@ img {
 
 /*Greeting component  */
 
-.greeting-message {
+/* .greeting-message {
   font-size: 2em;
   background-color: hsl(211, 100%, 30%);
   color: white;
@@ -63,4 +63,21 @@ img {
   border-radius: 10px;
   margin: 0;
   width: 500px;
+} */
+
+.list-category {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: blue;
+  border: 3px solid brown;
+  text-align: center;
+  width: 350px;
+  background-color: yellow
+}
+
+.list-item li:hover {
+  color: hsl(358, 100%, 30%);
+  background-color: yellowgreen;
+  cursor: pointer;
+  width: 300px;
 }
