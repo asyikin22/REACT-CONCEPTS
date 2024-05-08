@@ -171,7 +171,160 @@ Currently, two official plugins are available:
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/6f774072-eded-419d-8fc3-7de193df19d9)
 
 
+# CONDITIONAL RENDERING
 
+**WHAT IS IT?**:
+- It allows you to control what gets rendered in your application based on certain conditions
+- Show, hide, or change components
+
+**STEP BY STEP**:
+* Go to src folder and create Greeting.jsx file
+  - Add Greeting function component with props as argument
+  - Write export statement
+* Go to App.jsx and return the greeting component
+  - Using props we will send two key value pairs - isLoggedIn and username
+  - Import greeting
+* Go to Greeting.jsx and see if we are logged in
+  - Inside the return statement, use an if statement that will return 'Welcome <username>' on the browser
+  - Or if the value for isLoggedIn was false, an error message will be prompt accordingly
+* Style it in index.css - give the h2 responses class name and style them accordingly
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/07e1a955-101b-44a3-aab7-240b5d7c2804)
+
+**HOW TO IMPROVE CODES READIBILITY?**:
+* A ternary operator- We can simplify this more by storing the messages in constant
+* Add prop types property - for debugging
+* Add default props property in case username is not inputted.
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/1e083969-59d6-443d-a888-d0f987c3265b)
+
+# RENDER LIST
+
+**STEP BY STEP**
+* Go to src folder and create a List.jsx file
+  - Create a function component
+  - Write an export statement
+  - Create a list of animals and store them in a constant
+  - Return array of animals
+
+* App.jsx
+  - Import the animal list component
+  - Return the List inside function app
+  - Browser will return one big string - CapybaraHippopotamousBlobfishAlligatorLlama
+
+--------------------
+**ARRAY OF STRINGS**
+--------------------
+
+**Go back to List.jsx file**
+- Use built-in map method to create a new array of lists item
+- Pass an arrow function
+- Return an unordered list
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/44306970-7fdc-4338-985f-c40c9c057de4)
+
+
+--------------------
+**ARRAY OF OBJECTS**
+--------------------
+
+- We will convert array of strings into array of object
+- Each object will have a name property and its scientific names
+- Enclose elements inside curly braces to turn them into objects
+- Add name property and the scientific name
+- Inside the arrow function, chain animal to name in the list.
+- However this will return an error
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/c43edf6a-c23c-4e53-a72a-7d49a875d3ba)
+
+--------------------
+**KEY-ID**
+--------------------
+* React will want us to assign a key to each list item and each key should be unique
+* In the array of objects, we will set the key attributes to equal animal.name
+* In real world application, we want to assign a unique ID to object - set the key to be each ID
+* This is important because two objects may share the same name 
+
+--------------------
+**SORT OBJECTS**
+--------------------
+
+	• Let's now display the scientific name next to animals' name
+		→ Create a space by typing &nbsp
+		→ Insert JavaScript - animal.scientific for the scientific name 
+		
+	• Sort object by using sort method()
+		→ custom sorting function (a, b), a is for the first item, b is for the second
+		→ Then we iterate over the entire array
+		→ Use an arrow function (a.k.a. DO SOMETHING) 
+		→ Sort the strings accordingly 
+		
+	• Sort alphabetically:
+		→ Take the name property and use the built-in localCompare() method to b.name
+		→ animals.sort((a,b) => a.name.localeCompare(b.name))
+		
+	• Sort reverse alphabetical 
+		→ Replace a with b and b with a
+		→ animals.sort((a,b) => b.name.localeCompare(a.name))
+		
+	• Sort by lifespan (ascending)
+		→ animals.sort((a,b) => a.lifespan - b.lifespan)
+		
+	• Sort by lifespan (descending)
+		→ Replace a with b and b with a
+       → animals.sort((a,b) => b.lifespan - a.lifespan)
+
+
+  ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/095ee399-f4f2-49db-903c-697e8ad595f7)
+
+--------------------
+**FILTER OBJECTS**
+--------------------
+- Create new array of animals that have short lifespan lowLifespan
+- Set it to be equal to original array and use built-in filter method with paramater animal
+- Examine each animal in the animals array with arrow function
+- Set a condition, filter animal that has lifespan less than or equal to 50 and add it into the new array - lowLifespa
+- Display the new array using map() method, replace the original instance of 'animal' with 'lowLifespan'
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/f59c3a46-2a84-44a2-8395-1d8902b69f22)
+
+--------------------
+**REUSABLE LIST COMPONENT**
+--------------------
+**App.jsx (parent component)**
+- Now we are going to transform list component so it's reusable with different lists
+- Cut array of animals from Animals.jsx into function app in App.jsx (just above return statement)
+- Inside return statement, insert JavaScript - animals, add a category
+- Send all the data from parent component to list component (child)
+
+**List.jsx (Child component)**:
+- Set up props within list function
+- Create a const itemList, set it equal to props.items
+- Replace animals with itemList
+- Add a category
+- Return an h3 element that displays category of the list
+- Insert JavaScript constant category inside a curly braces
+- Remember to enclose the ul list and h3 elements inside tags
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/ca93233f-2d59-49d5-84b9-a4d962705b46)
+
+--------------------
+**CREATE NEW LIST USING REUSABLE COMPONENT**
+--------------------
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/19dfc59b-27a8-42e1-9f6f-da2e3ef0ad83)
+
+**CSS STYLING**
+* Add class Names
+* Style the element inside index.css
+* End-result:
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/01227fa3-7eca-450c-b4d9-30eaa5ad2b42)
+
+**IMPROVE READABILITY**
+- Conditional rendering
+- prop types
+- default props
 
 
 
