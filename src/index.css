@@ -65,7 +65,7 @@ img {
   width: 500px;
 } */
 
-.list-category {
+/* .list-category {
   font-size: 1.5em;
   font-weight: bold;
   color: blue;
@@ -80,4 +80,28 @@ img {
   background-color: yellowgreen;
   cursor: pointer;
   width: 300px;
+} */
+
+.counter-container{
+  text-align: center;
+}
+
+.count-display{
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+.counter-button {
+  margin: 0px 5px; 
+  width: 80px;
+  height: 25px;
+  background-color: pink;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.counter-button:hover {
+  background-color: salmon;
 }

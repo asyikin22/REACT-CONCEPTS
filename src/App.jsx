@@ -1,8 +1,8 @@
-import ButtonEvent from './ButtonEvent.jsx'
+import Counter from './Counter.jsx'
 
 function App() {
 
-  return( <ButtonEvent/>)
+  return( <Counter/>)
 
 }
 
