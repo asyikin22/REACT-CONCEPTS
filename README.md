@@ -326,6 +326,253 @@ Currently, two official plugins are available:
 - prop types
 - default props
 
+# CLICK EVENTS
+
+**WHAT IS IT?**:
+* An interaction when a user clicks on a specific element
+* We can respond to the click by passing a callback to the onClick event handler
+
+--------------------
+**ONCLICK ATTRIBUTE**
+--------------------
+**Button-event file (child component)**
+* Go to src folder and create a button-event component
+* Create a function component inside
+* Write a export default statement
+* Return a single button element
+* Inside return statement, set the onClick event handler equal to a callback to handleClick function (see the next step)
+* When we go to the browser and click on button, the message will be displayed on console.
+
+**Add JS event handler-onClick - create an inner function**
+- Set onClick to JS callback
+- Write an inner function inside button function
+- Const handleClick and assign it equal to arrow function
+- As we all know arrow function indicates 'DO SOMETHING'
+- Log the word 'YEAY' when button is pressed.
+
+**App.jsx file (parent component)**
+- Import button-event file from its location
+- Return a button component in the function app
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/03c2e889-8a52-49aa-8292-b284e9ceabbc)
+
+--------------------
+**ONCLICK WITH PARAMETER**
+--------------------
+
+- Create a second function const handleClick2
+- It will have parameter of name
+- Use an arrow function to console.log message with the name
+- For onclick event handler inside return, set a callback of handleClick2
+- If we have an arguments we need to send to a function, wrap the callback within an arrow function
+- Pseudo code for arrow function = When we click on the button, do this 
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/e60e011e-d028-40fc-95e0-f6d985b33f1f)
+
+--------------------
+**ONCLICK + CONDITIONS**
+--------------------
+* Set the onClick attribute to be a callback to handle click
+* Add a count variable set it to zero.
+* Insert name parameter inside the handleClick function
+* What we would like to do?
+  - Check if the count variable is less than 5
+  - If it is less than 5, increase the count by 1
+  - Log message to the console the number of time clicked (<5)
+  - If the user clicks too many times (>5), send a message accordingly
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/ac0ddb7e-ad48-44e8-ba8b-a4faaf15c70f)
+
+**EVENT PARAMETER**
+* Create a variable const handleClick, set it equal to event (e)
+* Click events were automatically provided with an event argument
+* It's an object that describes the event that occurred
+* Print event by logging it the console inside the arrow function
+* Inside the return statement, we need to wrap the event in arrow function
+* 'e' for parameter in onClick and 'e' for handleClick function
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/c5a5386f-fd46-4f70-beeb-2c109ff42a8f)
+
+--------------------
+**HOW TO UTILIZE EVENT OBJECT?**
+--------------------
+* Change the text content of the button
+* Go to 'target' property, look for 'textContent' inside the console
+* Go to our button event file, access that event object using dot(.) the property accessor and select textContent.
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/07c67c74-2e0b-46d9-b500-008875169073)
+
+# useState() HOOK
+
+**WHAT IS IT?**:
+- It is a special function that allows functional components to use React features w/o writing class component
+- Other hooks: useState, useEffect, useContext, useReducer, useCallback
+
+**useState()**:
+* A React hook that allows the creating of a stateful variable AND a setter function to update its value in the Virtual DOM
+* Value: [name, setName]
+* A stateful variable is whose value can change over time as a result of user interactions (clicking the button)
+* React manages its changes and re-renders accordingly.
+* When we include this hook, we will be given an array of 2 elements
+* We will use array destructuring to create a stateful variable and a setter function to update that variable.
+
+**Object vs Array destructuring in React:**
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/6fcc4238-c94a-4de3-9648-f711ce706d98)
+
+------------------------
+**HOW TO USE useState() FUNCTION?**
+------------------------
+
+**Go to src folder and create a MyComponent.jsx file**
+* Create a function component
+* Write export default statement
+* Import React library from its location and use object destructuring because we don’t need the entire library
+
+**App.jsx**:
+* Import MyComponent from its file path
+* Return it inside the function
+
+**How to use a useState function**
+* Create a stateful variable and a set function to update that variable
+* Declare a const, use […] for array destructuring
+* Set it equal to useState function - it will return an array with two elements - variable and setter function
+* Create a stateful variable for 'name' and write the provided 'setter function'
+* Inside return, create a paragraph name and a button with onClick attribute named Update Name
+* Create an update function to update name - Use an arrow function that will return name using setName
+
+**What happens in the background?**
+* When the stateful variable gets updated with the setter function, it triggers the re-render of the virtual DOM
+* With the use of useState() function, you can pass an initial state.
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/eb1d75b9-4d1e-436b-82a1-e7ee110b8ca5)
+
+**Add increment feature (Add age)**
+* Create an age variable and increment it
+* Declare a const variable
+* Use array destructuring [stateful variable, setter function] = [age, setAge]
+* Set it equal to use state to set its initial value
+* Inside return statement, create a paragraph for 'age', inserting JS {age}
+* Create a button function to increment age
+* Outside return statement, create a new variable to increment age
+* Use setAge function, takes age + 1 as its argument.
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/048ecc9e-c4c5-4150-8138-1e5a68b824e8)
+
+------------------------
+**COUNTER APPLICATION**
+------------------------
+
+**Go to src folder and create a Counter.jsx file**
+* Create a function component
+* Write export default statement
+* Import React library from its location and use object destructuring because we don’t need the entire library
+
+**App.jsx**
+* Import Counter.jsx from its file path
+* Return it inside the function
+
+**How to use useState() function - counter**
+* Declare a variable using array destructuring, create a stateful variable and its setter function
+* Set its initial value using useState()
+* Create new functions to increment, decrement and reset counter
+* Return elements inside return statement
+  - A p element to display the number
+  - 3 buttons represent increment, decrement and reset buttons
+  - The onClick attribute will get the JS function from the variable we declared initially
+* Style it in the index.css file 
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/aa83a461-1853-470c-bfdd-6d45750a7e89)
+
+
+# ONCHANGE EVENT HANDLER
+
+**WHAT IS IT?**:
+* It is an event handler used primarily with form elements
+* Example: input, text area, select, radio
+* It triggers a function every time the value of the input changes
+
+------------------------
+**INPUT TEXT & NUMBER**
+------------------------
+**Form.jsx**
+- Import React library from its location and use object destructuring to extract useState function
+- Create a variable name with setter function, setName
+- Set it equal to useState() to set its initial value - empty string
+- Return a div element
+  * Create an input element
+  * Set the value of input to JS stateful name variable
+  * Set the event handler onChange function to equal to a JS function that handles name change (function handleNameChange)
+- Include para element, Name - when I input a name, it will update in real time - Set name equal to JS 'name'
+- Include another para element, quantity - onChange event handler will be the callback to JS function
+
+**function handleNameChange - to handle name change**:
+* This is to be used inside return function
+* Create a function, take 'event' as parameter - this will be provided to us
+* When we change the value of input element, we will invoke the setName function
+* Set name variable to be - access event object, access target, get the value property (using property accessor)
+
+**Function handle - handle input number**
+* Create a quantity variable and its setter function = [quantity, setQuantity] - this is a callback
+* Set it equal to useState, pass 1 as parameter to set initial value.
+* Create a function to handle quantity change - event parameter is given to us
+* The parameter of setQuantity - access event object, access target, get the value property (using property accessor)
+* This function will provide a callback to onChange event handler
+
+**What happens in the background?**
+- The onChange event handler triggers a function every time the value of the input changes.
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/816fd330-13fb-4ee8-98e4-331e7ac03acb)
+
+------------------------
+**TEXT AREA**
+------------------------
+
+- Create a text area variable and the setter function = [comment, setComment]
+- Create a function handleCommentUpdate. Remember, the event is provided, we only have to access their properties and set them as parameters
+- Add our HTML element inside return statement
+  * Value = comment variable
+  * onChange event handler set equal to callback to handleCommentUpdate
+  * Placeholder
+  * Insert a para element to display the written comment
+
+ ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/09274a7d-d5c0-41a6-a731-7ceeb8d6f013)
+
+------------------------
+**SELECT OPTION**
+------------------------
+
+- Create a dropdown menu for Region to indicate where the users live on this lovely earth.
+- Create a region variable and the setter function = [region, setRegion]
+- Create a function handleRegionChange, event as parameter, use setter function to access event, target and its value
+- Add HTLM element
+  * Select tags
+  * Value = region variable
+  * onChange = callback to handleRegionChange function
+  * Include option element to allow users to select option
+  * Set 'select a region' option as default value. Set it equal to empty strings
+  * Add a para element to display region stateful variable
+ 
+  ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/ced1e805-da48-433d-88fe-9f3e76e88102)
+
+------------------------
+**RADIO BUTTON**
+------------------------
+- We will give an option to user if they want to subscribe to our newsletter or not
+- Create a subscribe variable and its setter function setSubscribe
+- Create a function handleSubscribeChange, event as parameter, use setter function to access event, target and its value
+- Add HTML element
+  * Create a label element that provides option to subscribe to newsletter and not to subscribe
+  * Create input element within label, set type to be 'radio', set value to 'subscribe'
+  * Check if the subscribe stateful variable is strictly equal to the value of users who want OR don’t want to subscribe
+  * If the value is true it will trigger onChange event handler and set it equal to JS function handleSubscribeChange
+  * Add a para element to display the selected subscription option. Set it equal to JS function {subscribe}
+
+ ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/bccd9d98-8b92-437d-8d76-1b0960c7d57d)
+
+  
+
+
 
 
 
