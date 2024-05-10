@@ -1,8 +1,8 @@
-import Form from './Form.jsx'
+import Phone from './Phone.jsx'
 
 function App() {
 
-  return( <Form/>)
+  return(<Phone/>)
 
 }
 
