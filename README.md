@@ -570,8 +570,116 @@ Currently, two official plugins are available:
 
  ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/bccd9d98-8b92-437d-8d76-1b0960c7d57d)
 
-  
+  # UPDATE OBJECT IN STATE
 
+----------------
+**Step-by-Step**
+----------------
+
+**Import react, create function component, set initial value with useState() hook**
+- Import useState() hook from react
+- Create state variable using array destructuring + set setter function
+- Set initial state with useState - JS Object: brand, model, year
+
+**Add HTML element**
+- Add div element to wrap everything
+- Add para element that includes JS brand, model, year
+- Add input value - type and value
+- Add onChange functions inside input element, set it to appropriate callback functions
+
+**onChange event handler**
+* Accept callbacks to some function
+* Create a function handleBrandChange, event as parameter, use setter function to access event, target and its value
+* Use updater function - set the phone into JS object and use spread operator to indicate change from previous state to next state
+  1) This function will allow for safe update
+  2) We don’t want to modify the current state of phone, rather make a reference to the previous state
+  3) Turn object to be a part of an arrow function
+  4) Enclose object within bracket after the arrow sign
+  5) We can change 'phone' to 'p' to indicate  previous state of phone instead of writing it in full
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/e29c9441-70e2-4a90-9990-df27a4fe8fef)
+
+
+----------------
+**RESULT**
+----------------
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/fc88fa86-7946-4dc1-9f22-f0f6d2c802f2)
+
+# UPDATE ARRAYS IN STATE
+
+----------------
+**Step-by-Step**
+----------------
+
+* Import useState hook from react using object destructuring
+* Create stateful variable using array destructuring [] and set setter function
+* Set initial value (useState) to be whatever
+
+**Create a function to add element into arrays**:
+- Create new constant, newCountry
+- Access it using document.getElementById
+- Access value using dot notation
+- Reset the input box by grabbing the button's ID and set the value to empty string ".."
+- Now use setter function to update array - pass newCountry as parameter
+- Add spread operator to access the previous array 'countries'
+- Create updater function to indicate the shift from previous state to the next state
+- Shorthand countries to 'c'
+
+**Create a function to remove element from arrays**:
+- Set onClick event handler on the list item, it's equal to a call back to remove country
+- When you click on a country, it will get deleted
+- In order to pass argument to event handler, we need to create an arrow function with no parameter
+- Pass on index number from map() method into handleRemoveCountry parameter
+- Within the function, grab setter function. Use filter method of countries array
+- With filter method, we are provided with (element, index)
+- Change element into underscore - it indicates that we can ignore the parameter passed to the function.
+
+**Add HTML element**
+- Div element, h2 element, unordered list
+- Inside UL, use map() method and pass on 'countries' and 'index' as parameter, this will appear automatically on the country list
+- Create an arrow function - TO DO SOMETHING
+- Create list item element - set key element equal to {index}
+- Within each list item, we add current country element {country}
+- Add input element to allow user to type in country
+- Create button to submit input - add an onClick event handler set equal to callback to handle add country
+
+----------------
+**RESULT**
+----------------
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/6a7587c6-83ea-457c-a276-1a9ff271f8c2)
+
+
+# UPDATE ARRAYS OF OBJECTS IN STATE
+
+**Create 4 state variables**
+- phones (array of phones), initial state = empty string
+- phoneBrand, phoneModel, phoneYear
+
+**Create functions to:**
+- Add phone
+- Remove phone - parameter is index
+- Change Brand - parameter is event
+- Change Model - parameter is event
+- Change year - parameter is event
+
+**Add HTML element**
+* Create a div element
+* Create h2 element
+* Create ul element
+  1) this is where the added phone will be displayed on the list
+  2) Use map method to return a new array
+  3) To remove - add onClick event handler, pass an index (of the phone we want to remove) as argument
+* Create input element for phone brand, phone model and year released
+  - Each has type, value and onChange event handler assigned to it
+* Create a button element to add phone - assign onClick handler equal to callback function handleAddPhone 
+
+----------------
+**RESULT**
+----------------
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/a8ec2795-9143-4fe4-bb6a-1540c495913c)
 
 
 
