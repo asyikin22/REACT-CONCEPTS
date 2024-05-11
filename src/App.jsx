@@ -1,8 +1,8 @@
-import Country from './Country.jsx'
+import PhoneArray from './PhoneArray.jsx'
 
 function App() {
 
-  return(<Country />)
+  return(<PhoneArray />)
 
 }
 
