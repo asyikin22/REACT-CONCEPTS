@@ -1,8 +1,8 @@
-import PhoneArray from './PhoneArray.jsx'
+import WidthHeight from './width-height.jsx'
 
 function App() {
 
-  return(<PhoneArray />)
+  return(<WidthHeight />)
 
 }
 
