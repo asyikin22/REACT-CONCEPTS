@@ -681,6 +681,120 @@ Currently, two official plugins are available:
 
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/a8ec2795-9143-4fe4-bb6a-1540c495913c)
 
+# useEffect() Hook
+
+**WHAT IS ITS?**:It tells react to do some code when -
+1) This component re-renders
+2) This component mounts - create and mount it to the DOM
+3) The state of a value changes
+
+**SYNTAX**
+* useEffect(function, [dependencies])
+  1) First argument: It can be callback, anonymous function or arrow function
+  2) Second argument: array of dependencies
+ 
+**HOW TO WRITE THE LOGIC**
+1) Runs after every re-render - pass a function
+2) Runs only on mount - pass an empty array of dependencies
+3) Runs on mount + when value changes - pass an array of value
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/820644f2-3921-4004-8c48-65c6eedd95d3)
+
+**WHEN TO USE IT?**
+1) Event listeners
+2) DOM manipulation
+3) Subscriptions(real-times updates)
+4) Fetching data from an API
+5) Clean up when a component unmounts - remove it from DOM
+
+----------------
+**NO DEPENDENCIES**
+----------------
+
+**useSet() hook:**
+* Create a function to add number, c+1
+* Add onClick event handle on button element inside return statement
+
+**useEffect() hook to update title**
+* Call useEffect on top of useSet.
+* There is only ONE argument = function
+* Access title of document and set it equal to count number
+  
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/eec0f2e8-e26c-4281-977e-6e4cf7278543)
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/8ca53690-4242-44e2-affb-ffe219bae69a)
+
+----------------
+**EMPTY DEPENDENCY ARRAY**
+----------------
+
+* There is only ONE argument = function
+* Access title of document and set it equal to count number
+* Add empty array inside useEffect() hook function as the second argument.{first argument, []}
+* It will only update the number on the app, NOT on the title of the document.
+* Alternatively, we can set the title of document to text form as follows:
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/f69fd769-ec65-4d47-a248-90d5e693f4a4)
+
+----------------
+**ONE DEPENDENCY - CHANGES IN VALUE**
+----------------
+* Add subtract button and add onclick event handler to it
+* Add 'count' as the second parameter inside the useEffect() hook function
+* The title will change only when the value of the count change
+* First argument will run, only if the second argument changes
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/8e020fc8-01fc-4fd0-98e2-47c915a77040)
+
+----------------
+**MULTIPLE DEPENDENCIES - CHANGES IN VALUE**
+----------------
+* Anytime of the two values change inside an array, the side code will be performed.
+* Create a state color variable, using array destructuring set setter function setColor, set it equal to 'blue'
+* Add onChange event handler to a new button element, set it equal to a callback function to switch color
+* Create a new function to handle change of color
+* Access the style attribute of para element and embed JS object - color, add another set of curly braces
+* Set color = color state variable
+* Add color property into the document title.
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/78822d3c-1c31-4eea-b0f9-1617742a7540)
+
+----------------------------
+**EXAMPLE - WIDTH x HEIGHT**
+----------------------------
+
+**useState() hook to change screen size**
+* Create two state variables - width and height
+* Add HTML element to display width and height
+* Create a function to handle change in size of the screen using setter functions
+* Add event listener
+
+**useEffect() hook to organize codes**
+* Only when the component mounts, when we append it to the DOM, ONE event listener will be added
+* We will only add ONE event listener regardless the number of times we resize the screen
+* Move event listener inside useEffect hook function
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/65485040-f50e-4c48-b119-196a3a0f04a7)
+
+**Multiple useEffect() hook to add title to document**
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/412609da-4c97-4ad4-ae4a-049348d1c847)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
