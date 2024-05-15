@@ -1,8 +1,8 @@
-import WidthHeight from './width-height.jsx'
+import MyComponent from './UseRef.jsx'
 
 function App() {
 
-  return(<WidthHeight />)
+  return(<MyComponent />)
 
 }
 

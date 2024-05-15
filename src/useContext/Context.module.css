@@ -1,0 +1,17 @@
+.box{
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.textA {
+    color: blue;
+}
+
+.textD {
+    color: rgb(13, 237, 13);
+}
+
+.textB {
+    color: rgb(241, 7, 241);
+    font-weight: bold;
+}
