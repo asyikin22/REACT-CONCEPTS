@@ -780,22 +780,124 @@ Currently, two official plugins are available:
 
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/412609da-4c97-4ad4-ae4a-049348d1c847)
 
+# useContext() HOOK
 
+**WHAT IS IT?**
+* React hook that allows you to share values between multiples levels of components
+* Without passing props down through each level
 
+----------------
+**Step-by-Step**
+----------------
 
+**Create 4 components, A, B, C, D**
+* Create component function and import them to App.jsx
+* Inside component A, import component B from its location, insert the component in return statement
+* Inside component B, import component C from its location, insert the component in return statement
+* Inside component C, import component D from its location, insert the component in return statement
 
+**Create useState() hook function**
+* Create user state variable and its setter function using object destructuring
+* Set initial value = your username
+* Import useState() hook from react using object destructuring
+* Create a h2 element and embed JS. Write 'Hello, username"
+  
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/fb8a8ddc-d350-460a-8156-c8098342a026)
 
+----------------
+**Provider Component**
+----------------
 
+**What is it?**: The component that has the data we would like to access to
 
+**Steps-by-steps**:
 
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/c5327737-904d-4105-bf21-9f36a83dc36c)
 
+----------------
+**Consumer Component**
+----------------
+* Import React, {userContext} from react
+* Import {MyContext} from provider component
+* Const value = useContext(MyContext)
 
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/86052451-6755-4c27-a6ab-b0a95859336a)
 
+----------------
+**Multiple Consumer Components**
+----------------
 
+* Import useContext hook from react
+* Import userContext from provider component
+* Create const variable ---> user =useContext(UserContext)
 
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/eb17562d-ea1e-4f4c-8456-a53bba95166a)
 
+# useRef() HOOK
 
+----------------
+**WHAT IS IT**
+----------------
 
+**useState() hook** - useState() re-renders the component when the state value changes
+
+**useRef()**
+* Does not cause re-renders when its value changes
+* When you want a component to ''remember" some information
+* But you don’t want that information to trigger new renders
+
+**When do we use it?**
+* Accessing/interacting with DOM elements
+* Handling Focus, Animations and Transitions
+* Managing Timers and Intervals
+
+----------------
+**SET UP**
+----------------
+
+**useState() hook - increase number by 2 when button is clicked**
+* Import useState, useEffect and useRef from react
+* Create number state variable using array destructuring, setter function and set the initial value to 0
+* Create button element inside return statement
+* Create a function event handler when button is clicked, embed the JS in HTML element
+
+**useEffect** - perform some code when the component renders
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/68f03645-4b06-4adf-8573-1dd488c72523)
+
+----------------
+**useRef() hook**
+----------------
+
+* It doesn't cause component to re-render when the value changes
+* It returns an object that has one property = current
+* Value of current property - string
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/b2c71d99-cf24-4286-81eb-02ff59f2e2d6)
+
+----------------
+**HTML Ref Attribute**
+----------------
+
+**Set up**
+* Create an input element inside a div
+* Create reference to input element - inputRef
+* Inside HTML element, set ref attribute equal to that reference
+* Create 2 more input
+
+**inputRef1.current.focus()**
+* It is used to give focus to the HTML element that inputRef1 is referencing.
+* When we use useRef() to create a ref and attach it to an HTML element, we can access the DOM node using the current property of the ref object.
+* By calling focus() on this DOM node, we're instructing the browser to bring focus to that particular input element.
+
+**What's happening in the background?**
+* Regardless which button was clicked, the component will only be rendered ONCE
+* By avoiding re-rendering when it's not needed, it's going to make your component more efficient.
+* useRef will return an object with one property of current
+* That current property can store an object, an array or an HTML element
+* When the stored value changes, it does not cause the component to re-render
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/bb6ca03d-8019-4ddf-97a7-b665b0149d5b)
 
 
 
