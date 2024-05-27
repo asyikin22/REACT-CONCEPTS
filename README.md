@@ -35,7 +35,8 @@ Currently, two official plugins are available:
 
 **END RESULT:**
 
-![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/9a2791e7-fd80-4cfa-aec9-f61ed565f712)
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/ebd97639-122f-428b-9e13-20feab340443)
+
 
 # CSS STYLING
 
@@ -914,6 +915,52 @@ Currently, two official plugins are available:
 * When the stored value changes, it does not cause the component to re-render
 
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/bb6ca03d-8019-4ddf-97a7-b665b0149d5b)
+
+
+# React Router
+
+**What does React Router do?**
+- A standard routing library for React app
+- We can specify React components that can be rendered based on the route
+
+----------------
+**Different version of React Router**
+----------------
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/dbc189f2-1171-4a4a-ba83-782c6e06da34)
+
+**Adding a Router**
+- Install react-router-dom
+- Import createBrowserRouter to create configuration for a router by passing arguments in the form of an array of routes
+- Configuration array contains objects with two mandatory keys:
+  1) The path
+  2) Corresponding element to be rendered
+ 
+**The link element**
+- Source: https://reactrouter.com/en/main/components/link
+- A link is an element that lets the user navigate to another page by clicking or tapping on it
+- We can replace the 'a' tag in our navbar with the 'Link' element.
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/6f762b50-e2a9-44a4-aa67-6dddc555e293)
+
+**Handling bad URLs**
+- Whenever a user visits an undefined path inside router, the wildcard path (*) will be triggered.
+- It acts as a catch-all router to handle error gracefully
+- We can simply create another 'Error Page' component.
+
+----------------
+**Demo of React Router**
+----------------
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/2107073f-07a0-4122-88f2-7f24f25ff382)
+
+
+**Refactor the routes:**
+- We will now import the routes from main.jsx into new route file to make it more readable and looks nicer
+- Now the file will look like this
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/9f5d7f20-ed9d-4bc2-bee6-81d3af884eb0)
+
 
 
 
