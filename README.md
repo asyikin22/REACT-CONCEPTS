@@ -760,7 +760,7 @@ Currently, two official plugins are available:
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/78822d3c-1c31-4eea-b0f9-1617742a7540)
 
 ----------------------------
-**EXAMPLE - WIDTH x HEIGHT**
+**EXAMPLE 1 - WIDTH x HEIGHT**
 ----------------------------
 
 **useState() hook to change screen size**
@@ -779,6 +779,22 @@ Currently, two official plugins are available:
 **Multiple useEffect() hook to add title to document**
 
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/412609da-4c97-4ad4-ae4a-049348d1c847)
+
+----------------------------
+**EXAMPLE 2 - CLOCK COUNTER**
+----------------------------
+
+**Objective**:
+- It shows how many seconds have passed since the user has loaded the webpage
+-  To update it every second, we use setInterval function to add one to the counter state variable, every second
+-  But this won't work because the function is being called not once, but at every state render
+
+**Solutions**:
+- Wrap setInterval function inside useEffect hooks
+- Add empty array as second argument - it tells app to run only when the initial component render
+- Add a clean-up function
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/2165e9af-b57b-4623-9781-1b58c49fc14a)
 
 # useContext() HOOK
 
