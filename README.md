@@ -927,7 +927,7 @@ Currently, two official plugins are available:
 **Different version of React Router**
 ----------------
 
-![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/dbc189f2-1171-4a4a-ba83-782c6e06da34)
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/78b6a834-ec21-4d24-9ac9-bcca009df7cb)
 
 **Adding a Router**
 - Install react-router-dom
