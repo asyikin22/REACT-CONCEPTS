@@ -961,6 +961,29 @@ Currently, two official plugins are available:
 
 ![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/9f5d7f20-ed9d-4bc2-bee6-81d3af884eb0)
 
+# Fetching data
+
+**What is it?**
+- We need some way to get data from external sources and dynamically display it
+- Make API calls
+- Manage component state
+- Handle asynchronous operations using JS's fetch function
+
+----------------
+**A basic fetch request**
+----------------
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/8695bdd5-c7b5-4a79-a896-6b70e69d57d2)
+
+
+**Step-by-step**
+- JSON data source: https://jsonplaceholder.typicode.com/photos
+
+![image](https://github.com/asyikin22/REACT-CONCEPTS/assets/148519441/e1ae74bf-3a33-4adb-9a8a-7815034fa09b)
+
+
+
+
 
 
 
